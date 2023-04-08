@@ -66,13 +66,14 @@ namespace CommittedPortals
         private static Piece.Requirement[] GetPlainsRequirements() => new[]
         {
             Requirement(PrefabNames.SurtlingCore, 5),
-            Requirement(PrefabNames.FineWood, 10, true),
+            Requirement(PrefabNames.FineWood, 35, true),
             Requirement(PrefabNames.FulingTotem, 1),
-            Requirement(PrefabNames.Tar, 35)
+            Requirement(PrefabNames.Tar, 15)
         };
 
         private static Piece.Requirement[] GetMistlandsRequirements() => new[]
         {
+            Requirement(PrefabNames.SurtlingCore, 5),
             Requirement(PrefabNames.BlackCore, 2),
             Requirement(PrefabNames.YggdrasilWood, 35, true),
             Requirement(PrefabNames.RefinedEitr, 3),
