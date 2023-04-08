@@ -10,7 +10,7 @@ namespace CommittedPortals
         public const string ModName = "CommittedPortals";
         public const string Guid = "no.fyren.committedportals";
 
-        public readonly Harmony Harmony = new Harmony(Guid);
+        public readonly Harmony Harmony = new(Guid);
 
         private void Awake()
         {

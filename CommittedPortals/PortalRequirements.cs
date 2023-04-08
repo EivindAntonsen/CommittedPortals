@@ -9,7 +9,7 @@ namespace CommittedPortals
     public class PortalRequirements
     {
         private static readonly Dictionary<Biomes, Piece.Requirement[]> RequirementsMap =
-            new Dictionary<Biomes, Piece.Requirement[]>
+            new()
             {
                 { Biomes.Meadows, GetMeadowsRequirements() },
                 { Biomes.BlackForest, GetMeadowsRequirements() },
@@ -36,8 +36,7 @@ namespace CommittedPortals
             .GetPrefab(prefabName)
             .GetComponent<ItemDrop>();
 
-        private static Piece.Requirement Requirement(string prefabName, int amount, bool recover = false) =>
-            new Piece.Requirement { m_resItem = GetItemDrop(prefabName), m_amount = amount, m_recover = recover, m_amountPerLevel = 1 };
+        private static Piece.Requirement Requirement(string prefabName, int amount, bool recover = false) => new() { m_resItem = GetItemDrop(prefabName), m_amount = amount, m_recover = recover, m_amountPerLevel = 1 };
 
         private static Piece.Requirement[] GetMeadowsRequirements() => new[]
         {
