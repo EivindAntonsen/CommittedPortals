@@ -1,0 +1,35 @@
+Player.HaveRequirements
+Player.InPlaceMode (if you need a constant check)
+Player.SetPlaceMode if you want to change the recipe when they activate placement mode.
+InventoryGui.SetupRequirement
+InventoryGui.UpdateRecipe
+
+or create delegates to change the recipe in ObjectDB on the fly.
+
+if (Player.m_localPlayer != null)
+{
+    Biomes = (int)Player.m_localPlayer.GetCurrentBiome();
+}
+
+
+and then you can just check based on this enum
+
+        None = 0,
+        Meadows = 1,
+        Swamp = 2,
+        Mountain = 4,
+        BlackForest = 8,
+        Plains = 16,
+        AshLands = 32,
+        DeepNorth = 64,
+        Ocean = 256,
+        Mistlands = 512,
+if (Biomes == 1)
+{
+your code
+}
+
+if (Biomes == 2)
+{
+your code
+}
